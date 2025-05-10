@@ -1,0 +1,185 @@
+:root {
+    --primary: #4f6ef7;
+    --bg: #cfd9e7;
+    --text: #222;
+    --card: #f9f9f9;
+    --shadow: rgba(0, 0, 0, 0.2);
+  }
+  
+  body.dark {
+    --primary: #8ab4f8;
+    --bg: #1e1e1e;
+    --text: #f5f5f5;
+    --card: #2c2c2c;
+    --shadow: rgba(255, 255, 255, 0.05);
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #28a796, #e40505a1);
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    transition: background 0.4s;
+  }
+  
+  .container {
+    background-color: var(--bg);
+    color: var(--text);
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px var(--shadow);
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 2px 2px 6px var(--shadow);
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 18px;
+    background-color: var(--primary);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-1px);
+    background-color: darken(var(--primary), 10%);
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #d68f0c;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filter {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #15ac2ec9;
+    border: none;
+    font-weight: bold;
+    transition: all 0.2s;
+  }
+  
+  .filter:hover {
+    background-color: #d4d4d4;
+  }
+  
+  .filter.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card);
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px var(--shadow);
+    animation: popIn 0.4s ease-out;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  li:hover {
+    transform: scale(1.02);
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

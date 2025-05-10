@@ -23,6 +23,10 @@ This app lets you manage your daily tasks with a modern design, 3D animations, d
 ## 📸 Preview
 
 ![image](https://github.com/user-attachments/assets/50313ed8-bbec-427d-a40d-1f7907d33aed)
+
+
+![image](https://github.com/user-attachments/assets/27bf4049-053d-48a0-8bea-3cbde3d37bf6)
+
   
 > ✨ 3D-styled UI with smooth transitions and intuitive design.
 
